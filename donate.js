@@ -18,6 +18,11 @@ document
     const noakhaliDonated = textValueGatherer("noakhali-donated");
     const newNoakhaliDonated = parseFloat(noakhaliDonated) + parseFloat(donate);
     document.getElementById("noakhali-donated").innerText = newNoakhaliDonated;
+    const p = document.createElement("p");
+    const timeNow = new Date();
+    p.innerText = `Donated ${donate} taka for Noakhali. The time during the transaction was ${timeNow}`;
+    p.classList.add("text-black", "bg-gray-200", "p-4", "m-2", "rounded");
+    document.getElementById("transactions").appendChild(p);
   });
 document
   .getElementById("feni-donate-btn")
@@ -37,6 +42,11 @@ document
     const feniDonated = textValueGatherer("feni-donated");
     const newFeniDonated = parseFloat(feniDonated) + parseFloat(donate1);
     document.getElementById("feni-donated").innerText = newFeniDonated;
+    const p = document.createElement("p");
+    const timeNow1 = new Date();
+    p.innerText = `Donated ${donate1} taka for Feni. The time during the transaction was ${timeNow1}`;
+    p.classList.add("text-black", "bg-gray-200", "p-4", "m-2", "rounded");
+    document.getElementById("transactions").appendChild(p);
   });
 document
   .getElementById("stu-donate-btn")
@@ -56,4 +66,19 @@ document
     const stuDonated = textValueGatherer("stu-donated");
     const newStuDonated = parseFloat(stuDonated) + parseFloat(donate2);
     document.getElementById("stu-donated").innerText = newStuDonated;
+    const p = document.createElement("p");
+    const timeNow2 = new Date();
+    p.innerText = `Donated ${donate2} taka for Students. The time during the transaction was ${timeNow2}`;
+    p.classList.add("text-black", "bg-gray-200", "p-4", "m-2", "rounded");
+    document.getElementById("transactions").appendChild(p);
+  });
+document
+  .getElementById("donation-sec-btn")
+  .addEventListener("click", function () {
+    showSectionById("section-1");
+  });
+document
+  .getElementById("history-sec-btn")
+  .addEventListener("click", function () {
+    showSectionById("section-2");
   });
