@@ -12,3 +12,27 @@ document
     const newNoakhaliDonated = parseFloat(noakhaliDonated) + parseFloat(donate);
     document.getElementById("noakhali-donated").innerText = newNoakhaliDonated;
   });
+document
+  .getElementById("feni-donate-btn")
+  .addEventListener("click", function (event) {
+    event.preventDefault();
+    const donate1 = inputGatherer("feni-input");
+    const balance2 = textValueGatherer("balance");
+    const newBalance2 = parseFloat(balance2) - parseFloat(donate1);
+    document.getElementById("balance").innerText = newBalance2;
+    const feniDonated = textValueGatherer("feni-donated");
+    const newFeniDonated = parseFloat(feniDonated) + parseFloat(donate1);
+    document.getElementById("feni-donated").innerText = newFeniDonated;
+  });
+document
+  .getElementById("stu-donate-btn")
+  .addEventListener("click", function (event) {
+    event.preventDefault();
+    const donate2 = inputGatherer("stu-input");
+    const balance3 = textValueGatherer("balance");
+    const newBalance3 = parseFloat(balance3) - parseFloat(donate2);
+    document.getElementById("balance").innerText = newBalance3;
+    const stuDonated = textValueGatherer("stu-donated");
+    const newStuDonated = parseFloat(stuDonated) + parseFloat(donate2);
+    document.getElementById("stu-donated").innerText = newStuDonated;
+  });
